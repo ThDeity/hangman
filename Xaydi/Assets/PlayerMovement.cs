@@ -5,13 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public GameManager gm;
 
-    public float runSpeed = 500f;
-    public float strafeSpeed = 500f;
-    public float jumpForce = 15f;
-
-    protected bool strafeLeft = false;
-    protected bool strafeRight = false;
-    protected bool doJump = false;
+    [SerializeField] private float runSpeed = 500f, strafeSpeed = 500f, jumpForce = 15f;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -23,50 +17,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKey("a"))
-        {
-            strafeLeft = true;
-        }
-        else
-        {
-            strafeLeft = false;
-        }
-
-        if (Input.GetKey("d"))
-        {
-            strafeRight = true;
-        }
-        else
-        {
-            strafeRight = false;
-        }
-
-        if (Input.GetKeyDown("space"))
-        {
-            doJump = true;
-        }
-    }
-
     void FixedUpdate()
     {
         rb.MovePosition(transform.position + Vector3.forward * runSpeed * Time.deltaTime);
 
-        if (strafeLeft)
-        {
+        if (Input.GetAxis("Horizontal") < 0)
             rb.AddForce(-strafeSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }
-        if (strafeRight)
-        {
+
+        if (Input.GetAxis("Horizontal") > 0)
             rb.AddForce(strafeSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }
 
-        if (doJump)
-        {
+        if (Input.GetKey(KeyCode.Space))
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            doJump = false;
-        }
     }
 }
