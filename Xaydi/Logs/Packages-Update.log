@@ -1,0 +1,37 @@
+
+=== Sun Oct 24 20:21:07 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.9.0 to 1.11.2
+
+=== Tue Nov 16 21:15:11 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.11.2 to 1.13.5
+
+=== Mon Jan 17 14:21:39 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.13.5 to 1.14.4
+
+=== Sat May 21 14:55:14 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.14.4 to 1.15.13
+  com.unity.ide.rider from version 2.0.7 to 3.0.12
+  com.unity.ide.visualstudio from version 2.0.12 to 2.0.14
+  com.unity.ide.vscode from version 1.2.4 to 1.2.5
+  com.unity.test-framework from version 1.1.29 to 1.1.31
+  com.unity.timeline from version 1.4.8 to 1.6.4
